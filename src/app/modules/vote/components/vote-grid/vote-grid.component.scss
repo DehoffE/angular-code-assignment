@@ -1,0 +1,40 @@
+.vote-grid {
+  padding: 24px;
+
+  &__filter {
+    margin-bottom: 16px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .vote-grid {
+    &__cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .vote-grid {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .vote-grid {
+    padding: 12px;
+
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

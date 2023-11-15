@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card__visual visual">
+    <img [src]="poll.imageUrl" alt="Изображение карточки голосования" class="visual__image">
+    <span class="visual__voters-count">{{ poll.votersCount.toLocaleString() }}</span>
+    <span class="visual__points">{{ poll.points > 0 ? '+' : '' }}{{ poll.points }} Б</span>
+  </div>
+  <div class="card__meta meta">
+    <div class="meta__icon">
+      <img [src]="poll.iconUrl" alt="Иконка категории" class="meta__icon-image">
+    </div>
+    <div class="meta__info">
+      <span class="meta__category-name" [style]="{ backgroundColor: poll.bgColor, color: poll.textColor }">{{ poll.categoryName }}</span>
+      <h2 class="meta__title">{{ poll.title }}</h2>
+    </div>
+  </div>
+</div>

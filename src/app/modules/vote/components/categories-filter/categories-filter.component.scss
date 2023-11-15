@@ -1,0 +1,67 @@
+:host {
+  display: block;
+}
+
+.categories-filter {
+  position: relative;
+
+  user-select: none;
+
+  &--opened {
+    .categories-filter {
+      &__field {
+        box-shadow: 0 0 0 2px #bfdbfe;
+        border: 1px solid #3b82f6;
+      }
+    }
+  }
+
+  &__field {
+    padding: 8px;
+
+    color: #000;
+
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  &__field-placeholder {
+    font-family: 'Golos Text', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6c757d;
+  }
+
+  &__options-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    padding: 10px 0;
+    margin: 0;
+    max-height: 200px;
+    overflow: auto;
+
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    list-style: none;
+  }
+
+  &__option {
+    padding: 12px 20px;
+
+    font-family: 'Golos Text', sans-serif;
+    color: #495057;
+
+    cursor: pointer;
+
+    &:hover,
+    &--selected {
+      background: #dee2e6;
+    }
+  }
+}

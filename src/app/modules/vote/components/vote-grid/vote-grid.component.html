@@ -1,0 +1,17 @@
+<div class="vote-grid">
+  <div class="vote-grid__filter">
+    <app-categories-filter
+      placeholder="Выберите категорию"
+      [filters]="categories$ | async"
+      [emptyValue]="{ label: 'Не выбрано', value: null }"
+      (valueSelected)="onChangeFilter($event)"
+    ></app-categories-filter>
+  </div>
+  <div class="vote-grid__cards">
+    <app-vote-card
+      *ngFor="let poll of (polls$ | async)"
+      [poll]="poll"
+      class="vote-grid__card card"
+    ></app-vote-card>
+  </div>
+</div>

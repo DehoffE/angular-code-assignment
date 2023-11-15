@@ -1,0 +1,26 @@
+<div class="categories-filter" [class.categories-filter--opened]="isOpened">
+  <div class="categories-filter__field" (click)="onClickFilterField()">
+    <span class="categories-filter__field-placeholder" *ngIf="!selectedFilter">{{ placeholder }}</span>
+    <span class="categories-filter__field-placeholder" *ngIf="selectedFilter">{{ selectedFilter.label }}</span>
+  </div>
+  <ul class="categories-filter__options-list" *ngIf="isOpened">
+    <li class="categories-filter__options-item">
+      <div
+        class="categories-filter__option"
+        (click)="onSelectValue(emptyValue)"
+      >
+        {{ emptyValue.label }}
+      </div>
+    </li>
+    <li class="categories-filter__options-item">
+      <div
+        class="categories-filter__option"
+        [class.categories-filter__option--selected]="selectedFilter === value"
+        *ngFor="let value of filters"
+        (click)="onSelectValue(value)"
+      >
+        {{ value.label }}
+      </div>
+    </li>
+  </ul>
+</div>

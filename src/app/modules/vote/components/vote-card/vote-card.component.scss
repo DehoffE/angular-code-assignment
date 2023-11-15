@@ -1,0 +1,101 @@
+.card {
+  max-width: 400px;
+
+  &__visual {
+    margin-bottom: 16px;
+  }
+}
+
+.visual {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  &__voters-count {
+    position: absolute;
+    left: 17px;
+    top: 19px;
+
+    display: flex;
+    align-items: center;
+    padding: 5px 8px;
+
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+
+    &::before {
+      content: '';
+
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+
+      background-image: url('/assets/people.svg');
+      background-size: contain;
+    }
+  }
+
+  &__points {
+    position: absolute;
+    right: 17px;
+    top: 19px;
+
+    display: block;
+    padding: 5px 8px;
+
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #19172F;
+
+    background-color: #fff;
+    box-shadow: 0 3px 3px 0 rgba(159, 164, 182, 0.30), 0 1px 1px 0 rgba(188, 194, 216, 0.12);
+    border-radius: 20px;
+  }
+}
+
+.meta {
+  display: flex;
+
+  &__icon {
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    margin: 0;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__category-name {
+    display: block;
+    padding: 3px 12px;
+    margin-bottom: 5px;
+    width: max-content;
+
+    font-family: 'Golos Text', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+
+    border-radius: 8px;
+  }
+}
